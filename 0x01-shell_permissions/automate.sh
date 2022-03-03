@@ -1,7 +1,10 @@
 #!/bin/bash
-echo -e '#!/bin/bash\ngroups'>2-groups &chmod u+x 2-groups
-echo -e '#!/bin/bash\nsudo chown betty hello' > 3-new_owner && chmod u+x 3-new_owner
-echo -e '#!/bin/bash\ntouch hello' > 4-empty && chmod u+x 4-empty
-echo -e '#!/bin/bash\nchmod u+x hello' > 5-execute && chmod u+x 5-execute
-echo -e '#!/bin/bash\nchmod +114 hello' > 6-multiple_permissions && chmod u+x 6-multiple_permissions
-echo -e '#!/bin/bash\nchmod +x hello' > 7-everybody && chmod u+x 7-everybody
+echo -e '#!/bin/bash\nchmod a+x hello' > 8-James_Bond && chmod u+x 8-James_Bond
+echo -e '#!/bin/bash\nchmod 753 hello' > 9-John_Doe && chmod u+x 9-John_Doe
+echo -e '#!/bin/bash\nchmod --reference=olleh hello' > 10-mirror_permissions && chmod u+x 10-mirror_permissions
+echo -e '#!/bin/bash\nchmod -R ugo+X *' > 11-directories_permissions && chmod u+x 11-directories_permissions
+echo -e '#!/bin/bash\nmkdir dir_holberton -m=751' > 12-directory_permissions && chmod u+x 12-directory_permissions
+echo -e '#!/bin/bash\nchgrp holberton hello' > 13-change_group && chmod u+x 13-change_group
+echo -e '#!/bin/bash\nchown betty:holberton *' > 14-change_owner_and_group && chmod u+x 14-change_owner_and_group
+echo -e '#!/bin/bash\nchown -h betty:holberton _hello' > 15-symbolic_link_permissions && chmod u+x 15-symbolic_link_permissions
+echo -e '#!/bin/bash\nchown --from=guillaume betty hello' > 16-if_only && chmod u+x 16-if_only
